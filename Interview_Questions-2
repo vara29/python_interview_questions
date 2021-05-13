@@ -1,4 +1,4 @@
-#sort a list using quicksort
+#sort a list using (quicksort)
 #To get the correct position of the pivot element
 def pivot_position(list1,first,last):
     pivot = list1[first]
@@ -28,7 +28,7 @@ n = len(list1)
 quicksort(list1,0,n-1)
 print(list1)
 =========================================================================================================================================================================
-# Python program for implementation of Radix Sort
+# Python program for implementation of( Radix Sort)
 # A function to do counting sort of arr[] according to
 # the digit represented by exp.
  
