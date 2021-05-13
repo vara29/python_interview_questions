@@ -1,0 +1,62 @@
+# reverse a string
+def reverse(string):
+    rev_str=""
+    for i in string:
+        rev_str=i+rev_str  #concatenating the elements to the rev_str
+    print("Reversed string:",rev_str)
+string = input("Enter a string:")
+print("Entered string",string)
+reverse(string)
+
+===============================================================================================================================================================================
+# sort a list using bubblesort
+def sort(nums):
+    for i in range(len(nums)-1,0,-1):
+        for j in range(i):
+            if nums[j] > nums[j+1]:
+                temp = nums[j]
+                nums[j] = nums[j+1]
+                nums[j+1] = temp
+nums = [5,3,8,6,7,2]
+sort(nums)
+print(nums)
+============================================================================================================================================================================
+# sort a list using mergesort
+# Mergesort follows divide and conquer technique
+def mergesort(list1):
+    # divide the list into sublists untill it consists of single element
+    if len(list1)>1:
+        mid = len(list1)//2
+        left_list = list1[:mid]
+        right_list = list1[mid:]
+        mergesort(left_list)  # function calls recursively until left_list divide into sublists consists of 1 element
+        mergesort(right_list)  # function calls recursively until right_list divide into sublists consists of 1 element
+    #comapare the sublists and merge them into a list 
+        i = 0
+        j = 0
+        k = 0
+        while i<len(left_list) and j<len(right_list):
+            if left_list[i] < right_list[j]:
+                list1[k] = left_list[i]
+                i += 1
+                k += 1
+            else:
+                list1[k] = right_list[j]
+                j += 1
+                k +=1
+        # left element needs to append to the list from left_list or right_list 
+        while len(left_list)>i:
+            list1[k] = left_list[i]
+            i += 1
+            k +=1
+        while len(right_list)>j:
+            list1[k] = right_list[j]
+            j += 1
+            k += 1
+            
+num = int(input("How many elements do you want in a list:"))
+list1 = [int(input()) for x in range(num)]
+mergesort(list1)
+print("sorted list is:",list1)
+===========================================================================================================================================================================
+            
