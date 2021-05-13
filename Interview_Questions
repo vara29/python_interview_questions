@@ -192,7 +192,19 @@ for i in range(n):
         print(i+1,end = " ")
     print() 
   =========================================================================================================================================================================
-           
+   # Given N random numbers search for a number in the list of N random numbers (linear search)
+my_nums = [5,3,8,6,7,2]
+num = 8
+flag = False
+for element in my_nums:
+    if element == num:
+        print("Number is found")
+        flag = True
+        break
+if (flag == False):
+    print("Number not found")
+=========================================================================================================================================================================
+            
             
             
             
